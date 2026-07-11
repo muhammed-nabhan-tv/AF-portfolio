@@ -50,7 +50,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top" ref={root}>
       <span className="hero-ghost" aria-hidden="true">
-        AFNA
+        AFNA JASMIN
       </span>
 
       <div className="hero-frame">

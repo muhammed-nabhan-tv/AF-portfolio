@@ -10,11 +10,11 @@
 
 .hero-ghost {
   position: absolute;
-  top: 6%;
+  top: 18%;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: clamp(6rem, 30vw, 22rem);
+  font-size: clamp(4rem, 20vw, 15rem);
   color: transparent;
   -webkit-text-stroke: 1px var(--line);
   white-space: nowrap;
