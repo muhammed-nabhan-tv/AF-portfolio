@@ -1,0 +1,51 @@
+:root {
+  /* ---- Color: "Ink & Index" palette ---- */
+  --bg: #0b0b0c;          /* press-room black */
+  --bg-alt: #141416;      /* panel ink */
+  --bg-raised: #1b1b1e;   /* card ink */
+  --paper: #f2efe9;       /* bone paper */
+  --ink-dim: #8a8a85;     /* faded ink / secondary text */
+  --line: #2a2a2a;        /* hairline rule */
+  --accent: #ff4b1f;      /* signal orange — the stamp */
+  --accent-soft: #ff4b1f26;
+  --moss: #7c9473;        /* secondary ink, used sparingly */
+
+  /* ---- Type ---- */
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Space Grotesk", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ---- Scale ---- */
+  --fs-hero: clamp(3.4rem, 13vw, 11rem);
+  --fs-h1: clamp(2.4rem, 7vw, 5.5rem);
+  --fs-h2: clamp(1.8rem, 4.2vw, 3rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.15rem);
+  --fs-small: 0.85rem;
+
+  /* ---- Layout ---- */
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --max-w: 1400px;
+  --radius: 2px;
+
+  /* ---- Motion ---- */
+  --ease-ink: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --bg: #f5f3ec;          /* bone paper light */
+  --bg-alt: #eae6dc;      /* slightly darker panel */
+  --bg-raised: #dedad0;   /* card ink light */
+  --paper: #0c0c0d;       /* press-room black as text */
+  --ink-dim: #5c5c58;     /* faded ink / secondary text */
+  --line: #dcd7ca;        /* light hairline rule */
+  --accent: #e03b12;      /* slightly darker orange for contrast */
+  --accent-soft: #e03b121a;
+  --moss: #586b52;        /* secondary ink for light background */
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 1.25rem;
+  }
+}

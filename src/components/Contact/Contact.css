@@ -1,0 +1,444 @@
+/* .contact {
+  text-align: left;
+  padding-bottom: clamp(5rem, 12vw, 9rem);
+}
+
+.contact-headline {
+  font-size: var(--fs-h1);
+  margin: 0.6rem 0 2rem;
+  line-height: 1.05;
+}
+
+.contact-line {
+  display: block;
+  overflow: hidden;
+}
+
+.contact-line .char {
+  display: inline-block;
+  transform: translateY(105%);
+}
+
+.contact-line.is-accent {
+  color: var(--accent);
+}
+
+.contact-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+.status-dot-blink {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  margin-right: 0.7rem;
+  animation: pulse-dot 2s infinite ease-in-out;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0% {
+    opacity: 0.4;
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 0 6px var(--accent-soft);
+  }
+  100% {
+    opacity: 0.4;
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+}
+
+.status-desc {
+  color: var(--ink-dim);
+  line-height: 1.6;
+  max-width: 44ch;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  letter-spacing: 0.1em;
+}
+
+.contact-email {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  color: var(--paper);
+  border-bottom: 1px dashed var(--accent);
+  width: max-content;
+  padding-bottom: 0.1rem;
+  transition: border-color 0.3s var(--ease-ink), color 0.3s var(--ease-ink);
+}
+
+.contact-email:hover {
+  border-bottom-style: solid;
+  color: var(--accent);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+.contact-links a {
+  position: relative;
+  transition: color 0.3s var(--ease-ink);
+}
+
+.contact-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.3s var(--ease-ink);
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+.contact-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+.contact-form-panel {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2.2rem;
+  opacity: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--paper);
+  letter-spacing: 0.08em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  padding: 0.6rem 0;
+  outline: none;
+  transition: border-color 0.3s var(--ease-ink);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--ink-dim);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--accent);
+}
+
+
+.form-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.form-chip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--ink-dim);
+  cursor: pointer;
+  transition: background 0.3s var(--ease-ink), border-color 0.3s var(--ease-ink), color 0.3s var(--ease-ink);
+}
+
+.form-chip:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+.form-chip.is-active {
+  background-color: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.form-submit-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.6rem;
+}
+
+
+.form-success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.form-success-message h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--paper);
+  text-transform: uppercase;
+}
+
+.form-success-message p {
+  color: var(--ink-dim);
+  line-height: 1.6;
+  max-width: 32ch;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .contact-grid-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .contact-details-box {
+    border-top: none;
+    padding-top: 0;
+  }
+} */
+
+
+.contact {
+  text-align: left;
+  padding-bottom: clamp(5rem, 12vw, 9rem);
+}
+
+.contact-headline {
+  font-size: var(--fs-hero);
+  margin: 0.6rem 0 2.6rem;
+  line-height: 0.98;
+}
+
+.contact-line {
+  display: block;
+  overflow: hidden;
+}
+
+.contact-line .char {
+  display: inline-block;
+  /* No transform here — GSAP sets the hidden state in JS right before
+     animating. If the script never runs, the text stays visible. */
+}
+
+.contact-line.is-accent {
+  color: var(--accent);
+}
+
+/* Animated CTA button */
+.contact-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 1.1rem 1.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  will-change: transform;
+  transition: box-shadow 0.3s var(--ease-ink);
+  box-shadow: 0 0 0 0 var(--accent-soft);
+}
+
+.contact-btn:hover {
+  box-shadow: 0 0 0 10px var(--accent-soft);
+}
+
+.contact-btn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  animation: pulse-dot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.contact-btn-arrow {
+  display: inline-block;
+  transition: transform 0.35s var(--ease-ink);
+}
+
+.contact-btn:hover .contact-btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Email + social row */
+.contact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+}
+
+.contact-email {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--paper);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.2rem;
+  transition: color 0.3s var(--ease-ink);
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.contact-links a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.contact-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.3s var(--ease-ink);
+}
+
+.contact-links a:hover {
+  color: var(--paper);
+}
+
+.contact-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+@media (max-width: 640px) {
+  .contact-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

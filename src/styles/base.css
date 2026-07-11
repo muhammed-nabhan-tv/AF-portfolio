@@ -1,0 +1,125 @@
+@import "./variables.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: auto; /* GSAP/ScrollTrigger drives scroll, not native smooth-scroll */
+  transition: background-color 0.4s var(--ease-ink);
+}
+
+body {
+  background: var(--bg);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.4s var(--ease-ink), color 0.4s var(--ease-ink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: clamp(4rem, 10vw, 8rem) var(--gutter);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.hairline {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+.btn-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.6rem;
+  border: 1px solid var(--paper);
+  border-radius: var(--radius);
+  transition: background 0.3s var(--ease-ink), color 0.3s var(--ease-ink), border-color 0.3s var(--ease-ink);
+}
+
+.btn-stamp:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+/* Respect reduced motion preference across the site */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Smooth transition for theme colors */
+html, body, .navbar, .hairline, .project-row, .stat, .skill-group, .loader, .mobile-menu, footer, .btn-stamp, .about-panel, .marquee {
+  transition: background-color 0.4s var(--ease-ink), border-color 0.4s var(--ease-ink), color 0.4s var(--ease-ink), fill 0.4s var(--ease-ink);
+}
+
+
