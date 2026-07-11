@@ -49,7 +49,7 @@ export default function Loader({ onComplete }) {
   return (
     <div className="loader" ref={root} aria-hidden="true">
       <div className="loader-top">
-        <span className="loader-label">AFNA SHERIN</span>
+        <span className="loader-label">AFNA JASMIN</span>
         <span className="loader-label">INDEX / 2026</span>
       </div>
 

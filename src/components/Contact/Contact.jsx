@@ -198,7 +198,7 @@ import "./Contact.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const EMAIL = "hello@afnasherin.com";
+const EMAIL = "hello@afnajasmin.com";
 
 export default function Contact() {
   const root = useRef(null);

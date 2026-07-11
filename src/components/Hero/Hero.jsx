@@ -4,7 +4,7 @@ import gsap from "gsap";
 import "./Hero.css";
 
 const LINE_1 = "AFNA";
-const LINE_2 = "SHERIN";
+const LINE_2 = "JASMIN";
 
 /** Splits a word into one span per character for a staggered reveal. */
 function splitChars(word, keyPrefix) {
