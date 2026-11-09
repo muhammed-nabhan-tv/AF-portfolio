@@ -9,12 +9,14 @@
 
 .project-row {
   display: grid;
-  grid-template-columns: 3rem 2fr 1.4fr 1.6fr auto 2rem;
+  grid-template-columns: 3rem 2.2fr 1.4fr 1.6fr auto auto;
   align-items: center;
   gap: 1.2rem;
-  padding: 1.6rem 0;
+  padding: 1.8rem 0.5rem;
   border-bottom: 1px solid var(--line);
-  transition: padding-left 0.35s var(--ease-ink), background 0.35s var(--ease-ink);
+  cursor: pointer;
+  transition: padding-left 0.35s var(--ease-ink), background 0.35s var(--ease-ink), border-color 0.35s var(--ease-ink);
+  user-select: none;
 }
 
 .project-row:hover {
@@ -30,8 +32,10 @@
 
 .project-name {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
   text-transform: uppercase;
+  color: var(--paper);
+  line-height: 1.1;
 }
 
 .project-role {
@@ -42,7 +46,7 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .project-tags span {
@@ -54,38 +58,79 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 0.25rem 0.5rem;
+  background: var(--bg);
 }
 
 .project-year {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.project-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: all 0.25s var(--ease-ink);
+}
+
+.project-row:hover .project-cta-pill {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
 }
 
 .project-arrow {
-  font-size: 1.4rem;
+  font-size: 1rem;
+  line-height: 1;
   color: var(--accent);
-  transform: translate(0, 0);
-  transition: transform 0.35s var(--ease-ink);
+  transition: transform 0.25s var(--ease-ink), color 0.25s var(--ease-ink);
 }
 
 .project-row:hover .project-arrow {
-  transform: translate(4px, -4px);
+  color: var(--bg);
+  transform: translate(2px, -2px);
 }
 
-@media (max-width: 900px) {
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+@media (max-width: 960px) {
   .project-row {
     grid-template-columns: 2.4rem 1fr auto;
     grid-template-areas:
-      "id name arrow"
+      "id name action"
       "id role role"
       "id tags year";
-    row-gap: 0.5rem;
+    row-gap: 0.6rem;
+    padding: 1.4rem 0.4rem;
   }
+
   .project-id { grid-area: id; }
   .project-name { grid-area: name; }
-  .project-arrow { grid-area: arrow; justify-self: end; }
+  .project-cta-pill { grid-area: action; justify-self: end; }
   .project-role { grid-area: role; }
   .project-tags { grid-area: tags; }
   .project-year { grid-area: year; justify-self: end; }
+}
+
+@media (max-width: 540px) {
+  .project-cta-pill span:first-child {
+    display: none;
+  }
+  .project-cta-pill {
+    padding: 0.4rem 0.65rem;
+  }
 }

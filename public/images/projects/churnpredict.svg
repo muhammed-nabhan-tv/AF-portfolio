@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cp-grad-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <linearGradient id="cp-line-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c9473"/>
+      <stop offset="70%" stop-color="#ff4b1f"/>
+      <stop offset="100%" stop-color="#ff4b1f"/>
+    </linearGradient>
+    <linearGradient id="cp-area-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4b1f" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff4b1f" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#cp-grad-bg)" rx="8"/>
+  <rect x="0.5" y="0.5" width="799" height="449" fill="none" stroke="#26262a" rx="8"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" fill="#18181c" rx="8"/>
+  <circle cx="28" cy="24" r="5" fill="#ff4b1f"/>
+  <circle cx="44" cy="24" r="5" fill="#44444a"/>
+  <circle cx="60" cy="24" r="5" fill="#44444a"/>
+  
+  <text x="88" y="29" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="1.5">CHURNPREDICT // TELECOM RETENTION ENGINE</text>
+  <rect x="680" y="14" width="94" height="20" rx="3" fill="#ff4b1f22" stroke="#ff4b1f55"/>
+  <text x="727" y="28" text-anchor="middle" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">LIVE MODEL</text>
+
+  <!-- Metric Card 1 -->
+  <g transform="translate(30, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">AVG CHURN RATE</text>
+    <text x="16" y="58" fill="#f2efe9" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">14.2%</text>
+    <rect x="135" y="38" width="68" height="22" rx="3" fill="#7c947325"/>
+    <text x="169" y="53" text-anchor="middle" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">↓ 3.8%</text>
+  </g>
+
+  <!-- Metric Card 2 -->
+  <g transform="translate(290, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">SUBSCRIBER BASE</text>
+    <text x="16" y="58" fill="#f2efe9" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">254,120</text>
+    <text x="16" y="74" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Active Telco Accounts</text>
+  </g>
+
+  <!-- Metric Card 3 -->
+  <g transform="translate(550, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">SAVED REVENUE (ARR)</text>
+    <text x="16" y="58" fill="#ff4b1f" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">$412,800</text>
+    <text x="16" y="74" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Via targeted campaigns</text>
+  </g>
+
+  <!-- Main Chart Section -->
+  <g transform="translate(30, 175)">
+    <rect width="480" height="245" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="20" y="28" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">PREDICTED VS ACTUAL ATTRITION</text>
+    <text x="20" y="44" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Rolling 6-month probability trend across customer risk bands</text>
+
+    <!-- Grid lines -->
+    <line x1="40" y1="75" x2="450" y2="75" stroke="#222228" stroke-dasharray="3,3"/>
+    <line x1="40" y1="115" x2="450" y2="115" stroke="#222228" stroke-dasharray="3,3"/>
+    <line x1="40" y1="155" x2="450" y2="155" stroke="#222228" stroke-dasharray="3,3"/>
+    <line x1="40" y1="195" x2="450" y2="195" stroke="#222228" stroke-dasharray="3,3"/>
+
+    <!-- Y labels -->
+    <text x="32" y="78" text-anchor="end" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">20%</text>
+    <text x="32" y="118" text-anchor="end" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">15%</text>
+    <text x="32" y="158" text-anchor="end" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">10%</text>
+    <text x="32" y="198" text-anchor="end" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">5%</text>
+
+    <!-- Chart Line & Area -->
+    <polygon points="50,180 110,165 170,172 230,135 290,140 350,110 410,95 440,90 440,205 50,205" fill="url(#cp-area-grad)"/>
+    <polyline points="50,180 110,165 170,172 230,135 290,140 350,110 410,95 440,90" fill="none" stroke="url(#cp-line-grad)" stroke-width="3"/>
+    
+    <!-- Dots on points -->
+    <circle cx="50" cy="180" r="4" fill="#7c9473"/>
+    <circle cx="110" cy="165" r="4" fill="#7c9473"/>
+    <circle cx="170" cy="172" r="4" fill="#7c9473"/>
+    <circle cx="230" cy="135" r="4" fill="#ff4b1f"/>
+    <circle cx="290" cy="140" r="4" fill="#ff4b1f"/>
+    <circle cx="350" cy="110" r="4" fill="#ff4b1f"/>
+    <circle cx="410" cy="95" r="5" fill="#f2efe9" stroke="#ff4b1f" stroke-width="2"/>
+    <circle cx="440" cy="90" r="4" fill="#ff4b1f"/>
+
+    <!-- X labels -->
+    <text x="50" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">MAY</text>
+    <text x="110" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">JUN</text>
+    <text x="170" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">JUL</text>
+    <text x="230" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">AUG</text>
+    <text x="290" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">SEP</text>
+    <text x="350" y="222" text-anchor="middle" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">OCT</text>
+    <text x="410" y="222" text-anchor="middle" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">NOV</text>
+  </g>
+
+  <!-- Side Breakdown Section -->
+  <g transform="translate(530, 175)">
+    <rect width="240" height="245" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="18" y="28" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">RISK SEGMENTATION</text>
+    
+    <!-- Segment 1: Low Risk -->
+    <text x="18" y="60" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">LOW RISK (0-20%)</text>
+    <text x="222" y="60" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">68%</text>
+    <rect x="18" y="68" width="204" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="68" width="138" height="8" rx="4" fill="#7c9473"/>
+
+    <!-- Segment 2: Moderate Risk -->
+    <text x="18" y="105" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">MODERATE (20-60%)</text>
+    <text x="222" y="105" text-anchor="end" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">21%</text>
+    <rect x="18" y="113" width="204" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="113" width="43" height="8" rx="4" fill="#8a8a85"/>
+
+    <!-- Segment 3: High Risk -->
+    <text x="18" y="150" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">HIGH RISK (60-100%)</text>
+    <text x="222" y="150" text-anchor="end" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">11%</text>
+    <rect x="18" y="158" width="204" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="158" width="23" height="8" rx="4" fill="#ff4b1f"/>
+
+    <!-- Feature importance mini table -->
+    <line x1="18" y1="185" x2="222" y2="185" stroke="#25252b"/>
+    <text x="18" y="202" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">KEY SIGNAL: 3+ Support Calls</text>
+    <text x="18" y="218" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">FEATURE IMPORTANCE: AUC 0.89</text>
+    <text x="18" y="234" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="9">TRIGGER: Auto-Retention Offer</text>
+  </g>
+</svg>

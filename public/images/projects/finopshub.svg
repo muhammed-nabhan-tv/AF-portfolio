@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#fo-bg)" rx="8"/>
+  <rect x="0.5" y="0.5" width="799" height="449" fill="none" stroke="#26262a" rx="8"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" fill="#18181c" rx="8"/>
+  <circle cx="28" cy="24" r="5" fill="#7c9473"/>
+  <circle cx="44" cy="24" r="5" fill="#44444a"/>
+  <circle cx="60" cy="24" r="5" fill="#44444a"/>
+  
+  <text x="88" y="29" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="1.5">FINOPS HUB // AUTOMATED RECONCILIATION ENGINE</text>
+  <rect x="650" y="14" width="124" height="20" rx="3" fill="#7c947322" stroke="#7c947355"/>
+  <text x="712" y="28" text-anchor="middle" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">AUDIT VERIFIED</text>
+
+  <!-- Metric 1 -->
+  <g transform="translate(30, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">WEEKLY TIME SAVED</text>
+    <text x="16" y="58" fill="#7c9473" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">18.5 HRS</text>
+    <rect x="135" y="38" width="68" height="22" rx="3" fill="#7c947325"/>
+    <text x="169" y="53" text-anchor="middle" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">98% CUT</text>
+  </g>
+
+  <!-- Metric 2 -->
+  <g transform="translate(290, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">RECONCILIATION RATE</text>
+    <text x="16" y="58" fill="#f2efe9" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">99.98%</text>
+    <text x="16" y="74" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Zero discrepancy rate</text>
+  </g>
+
+  <!-- Metric 3 -->
+  <g transform="translate(550, 68)">
+    <rect width="220" height="85" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="16" y="26" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">TRANSACTIONS RUN</text>
+    <text x="16" y="58" fill="#ff4b1f" font-family="'Anton', sans-serif" font-size="28" letter-spacing="1">1.8M / MO</text>
+    <text x="16" y="74" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Multi-gateway pipelines</text>
+  </g>
+
+  <!-- Ledger & Reconciliation Table -->
+  <g transform="translate(30, 175)">
+    <rect width="470" height="245" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="20" y="28" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">LIVE TRANSACTION MATCH LEDGER</text>
+    <text x="20" y="44" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Automated multi-currency gateway settlements vs General Ledger</text>
+
+    <!-- Table Header -->
+    <text x="20" y="72" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">TX ID</text>
+    <text x="110" y="72" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">GATEWAY</text>
+    <text x="210" y="72" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">AMOUNT</text>
+    <text x="320" y="72" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">SETTLED</text>
+    <text x="440" y="72" text-anchor="end" fill="#55555c" font-family="'JetBrains Mono', monospace" font-size="9">STATUS</text>
+    <line x1="20" y1="80" x2="450" y2="80" stroke="#25252b"/>
+
+    <!-- Row 1 -->
+    <text x="20" y="104" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">#TX-88491</text>
+    <text x="110" y="104" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">Stripe USD</text>
+    <text x="210" y="104" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">$14,250.00</text>
+    <text x="320" y="104" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">$13,836.75</text>
+    <text x="440" y="104" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">MATCHED</text>
+
+    <!-- Row 2 -->
+    <text x="20" y="136" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">#TX-88492</text>
+    <text x="110" y="136" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">PayPal EUR</text>
+    <text x="210" y="136" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">€8,120.40</text>
+    <text x="320" y="136" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">€7,836.19</text>
+    <text x="440" y="136" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">MATCHED</text>
+
+    <!-- Row 3 -->
+    <text x="20" y="168" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">#TX-88493</text>
+    <text x="110" y="168" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">Wire Transfer</text>
+    <text x="210" y="168" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">$52,000.00</text>
+    <text x="320" y="168" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">$51,985.00</text>
+    <text x="440" y="168" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">MATCHED</text>
+
+    <!-- Row 4 -->
+    <text x="20" y="200" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">#TX-88494</text>
+    <text x="110" y="200" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="10">Stripe GBP</text>
+    <text x="210" y="200" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="10">£3,410.00</text>
+    <text x="320" y="200" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">Pending</text>
+    <text x="440" y="200" text-anchor="end" fill="#ff4b1f" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">AUTO-FLAG</text>
+
+    <!-- Footer summary -->
+    <line x1="20" y1="216" x2="450" y2="216" stroke="#25252b"/>
+    <text x="20" y="234" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">AUTOMATION ENGINE: VBA script executed in 14.2s (SQL linked)</text>
+  </g>
+
+  <!-- Pipeline Health Side Panel -->
+  <g transform="translate(520, 175)">
+    <rect width="250" height="245" fill="#151519" stroke="#25252b" rx="6"/>
+    <text x="18" y="28" fill="#f2efe9" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">ETL PIPELINE HEALTH</text>
+    
+    <text x="18" y="60" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">PowerQuery Scripts</text>
+    <text x="232" y="60" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">ONLINE</text>
+    <rect x="18" y="68" width="214" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="68" width="214" height="8" rx="4" fill="#7c9473"/>
+
+    <text x="18" y="105" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">SQL Data Mart Bridge</text>
+    <text x="232" y="105" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">SYNCED</text>
+    <rect x="18" y="113" width="214" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="113" width="200" height="8" rx="4" fill="#7c9473"/>
+
+    <text x="18" y="150" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="10">FX Currency Conversion</text>
+    <text x="232" y="150" text-anchor="end" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">REALTIME</text>
+    <rect x="18" y="158" width="214" height="8" rx="4" fill="#222228"/>
+    <rect x="18" y="158" width="185" height="8" rx="4" fill="#7c9473"/>
+
+    <line x1="18" y1="185" x2="232" y2="185" stroke="#25252b"/>
+    <text x="18" y="202" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">DISCREPANCIES RESOLVED: 100%</text>
+    <text x="18" y="218" fill="#8a8a85" font-family="'JetBrains Mono', monospace" font-size="9">AUDIT COMPLIANCE: SOC-2 Ready</text>
+    <text x="18" y="234" fill="#7c9473" font-family="'JetBrains Mono', monospace" font-size="9">CYCLE RUN: Every 60 Mins</text>
+  </g>
+</svg>

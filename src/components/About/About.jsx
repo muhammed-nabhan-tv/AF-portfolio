@@ -57,7 +57,7 @@ export default function About() {
       <div className="about-grid">
         <div className="about-panel">
           <div className="about-image-wrapper">
-            <img src="/images/analyst-photo.png" alt="Afna Sherin" className="about-image" />
+            <img src="/images/afna.jpeg" alt="Afna Jasmin" className="about-image" />
           </div>
         </div>
 

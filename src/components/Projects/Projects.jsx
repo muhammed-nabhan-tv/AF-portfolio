@@ -1,14 +1,16 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import projects from "../../data/projects";
+import ProjectPage from "./ProjectPage";
 import "./Projects.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const root = useRef(null);
+  const [activeProject, setActiveProject] = useState(null);
 
   useGSAP(
     () => {
@@ -29,14 +31,32 @@ export default function Projects() {
     { scope: root }
   );
 
+  const handleOpenProject = (project) => {
+    setActiveProject(project);
+  };
+
   return (
     <section className="section projects" id="projects" ref={root}>
       <p className="eyebrow">Selected work</p>
       <h2 className="projects-title">The index</h2>
 
-      <div className="project-list">
+      {/* Projects Table List */}
+      <div className="project-list" role="list">
         {projects.map((project) => (
-          <a className="project-row" href="#contact" key={project.id}>
+          <div
+            className="project-row"
+            key={project.id}
+            role="button"
+            tabIndex={0}
+            onClick={() => handleOpenProject(project)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleOpenProject(project);
+              }
+            }}
+            aria-label={`Open full page for ${project.title}`}
+          >
             <span className="project-id">{project.id}</span>
             <span className="project-name">{project.title}</span>
             <span className="project-role">{project.role}</span>
@@ -46,12 +66,25 @@ export default function Projects() {
               ))}
             </span>
             <span className="project-year">{project.year}</span>
-            <span className="project-arrow" aria-hidden="true">
-              ↗
+
+            <span className="project-cta-pill">
+              <span>View Case Study</span>
+              <span className="project-arrow" aria-hidden="true">
+                ↗
+              </span>
             </span>
-          </a>
+          </div>
         ))}
       </div>
+
+      {/* Full Page Project View */}
+      <ProjectPage
+        isOpen={Boolean(activeProject)}
+        project={activeProject}
+        projects={projects}
+        onClose={() => setActiveProject(null)}
+        onSelectProject={(proj) => setActiveProject(proj)}
+      />
     </section>
   );
 }
